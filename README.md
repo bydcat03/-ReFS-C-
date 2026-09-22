@@ -15,15 +15,17 @@ Windows Defender 脱机扫描失效
 警告：对于想要安装Experimental Future Platforms（版本号29xxx +)的用户，你需要提前在UEFI中关闭安全启动，否则安装程序重启后将无法通过安全启动校验，并且对于UEFI的更改将无法被保存，如果你已经遇到了这种情况，请联系主板售后关闭安全启动即可正常进入系统。这个问题曾在2026年春季的Canary版本中出现，不确定后续版本是否仍然存在。
 
 
+<img width="1888" height="1654" alt="FABE99D1244E7789EF06AB3FCF82C577" src="https://github.com/user-attachments/assets/4451c5d6-a63c-48b1-9624-81e890e97624" />
 
 安装主界面
 使用U盘等工具进入Windows原生安装界面，选择你需要作为C盘的硬盘（建议整盘方便操作）
 
-![Uploading FABE99D1244E7789EF06AB3FCF82C577.jpg…]()
+<img width="1988" height="1750" alt="9F43050BFC20512860ACAEEFA2892195" src="https://github.com/user-attachments/assets/d2e88cdf-2e87-4aa4-9628-6165e754c716" />
 
 删除分区
 使用删除操作合并掉所有分区，然后点击创建分区
 
+<img width="4076" height="1838" alt="C1A5F89D3C305A2D45C605955A3290A9" src="https://github.com/user-attachments/assets/c2c390d4-c921-4577-8bb5-70fd5e140282" />
 
 创建分区
 这个时候你会看到左侧的一串数字，你应当将其更改为【当前显示的数字】-200【引导分区】-16【保留分区】-1024或2048【恢复分区】
