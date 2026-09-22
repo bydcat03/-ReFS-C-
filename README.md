@@ -15,9 +15,11 @@ Windows Defender 脱机扫描失效
 警告：对于想要安装Experimental Future Platforms（版本号29xxx +)的用户，你需要提前在UEFI中关闭安全启动，否则安装程序重启后将无法通过安全启动校验，并且对于UEFI的更改将无法被保存，如果你已经遇到了这种情况，请联系主板售后关闭安全启动即可正常进入系统。这个问题曾在2026年春季的Canary版本中出现，不确定后续版本是否仍然存在。
 
 
+
 安装主界面
 使用U盘等工具进入Windows原生安装界面，选择你需要作为C盘的硬盘（建议整盘方便操作）
 
+![Uploading FABE99D1244E7789EF06AB3FCF82C577.jpg…]()
 
 删除分区
 使用删除操作合并掉所有分区，然后点击创建分区
@@ -36,19 +38,20 @@ Windows Defender 脱机扫描失效
 
 点击确定后等待分区划分完成，Alt+F10组合键调出cmd
 
+<img width="3320" height="1878" alt="82014FAB5BE3EA1D087AE39D56F3EB7D" src="https://github.com/user-attachments/assets/b84556f9-9235-4762-bba3-222752b495f5" />
 
 cmd界面，在安装环境下使用Alt+F10调出
 键入
 
-format C: /Q/FS:ReFS
+    format C: /Q/FS:ReFS
 
 然而，如果你已经有另外一块格式化完成的硬盘存在，这里应当键入
 
-format D: /Q/FS:ReFS
+    format D: /Q/FS:ReFS
 
 反回的确认信息中会提示需要格式化的分区文件系统类型为NTFS，即可键入
 
-Y
+    Y
 
 继续按提示可以直接回车，然后可以关闭cmd
 
@@ -70,24 +73,24 @@ OOBE期间请不要登录微软账户，企业版系统可以直接域加入，�
 
 右键win图标打开管理员cmd,键入
 
-diskpart
+    diskpart
 
-list disk
+    list disk
 
 如果你的C盘是disk 0则键入
 
-select disk 0
+    select disk 0
 
-list partition
+    list partition
 
-select partition 4
+    select partition 4
 
-set id=de94bba4-06d1-4d40-a16a-bfd50179d6ac
+    set id=de94bba4-06d1-4d40-a16a-bfd50179d6ac
 
-gpt attributes=0x8000000000000001
+    gpt attributes=0x8000000000000001
 
-exit
+    exit
 
-Reagentc /enable
+    Reagentc /enable
 
 这里提示恢复分区激活成功就大功告成了
