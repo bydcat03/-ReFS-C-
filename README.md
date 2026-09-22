@@ -1,5 +1,5 @@
-# -ReFS-C-
-解决ReFS作为C盘文件系统找不到恢复分区的问题
+# Solves the issue of ReFS not finding the recovery partition as the C drive file system
+# 解决ReFS作为C盘文件系统找不到恢复分区的问题
 
 这篇文章仅适用于已经长时间接触ReFS的Windows用户，如果你并不知道ReFS是什么，那么不建议继续阅读下面的内容。
 
@@ -71,6 +71,7 @@ OOBE期间请不要登录微软账户，企业版系统可以直接域加入，�
 
 关闭设备加密
 进入系统后找到设置-隐私与安全-设备加密并将其关闭，如果遇到蓝屏重启请重复操作直到解密完成开关变为关闭。不建议在控制面板里操作，可能会导致系统假死
+
 
 
 创建并格式化硬盘分区
